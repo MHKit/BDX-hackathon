@@ -23,8 +23,6 @@
 ## Presentation My Human Kit
 ## Objectifs du hackathon
 
-
-
 # Guide de demarrage
 
 ## Creer un compte github
@@ -35,7 +33,7 @@ Github est un service basé sur le système de versionnage Git. Il permet de fac
 
 ## installer git
 
-### Mac
+### OSX/Linux
 
 Téléchargez la dernière version de Git sur : http://git-scm.com/downloads
 Ouvrez le fichier ainsi téléchargé et suivez les instructions en laissant toutes les valeurs par défaut.
@@ -51,11 +49,44 @@ Puis associer votre email (celui utilisé pour votre github)
 ```
 git config --global user.email "YOUR EMAIL ADDRESS"
 ```
+## Fork, Clone & Pull-request
+
+Rendez vous sur la page du repository https://github.com/MHKit/BDX-hackathon
+Ensuite, cliquez sur le bouton “fork” en haut à droite pour créer une copie du repository sur votre propre compte github.
+
+Une fois le fork terminé, le repository existe sous votre compte avec l’url https://github.com/TonUsername/BDX-hackathon
+
+Pour le télécharger sur votre ordinateur, ouvrez un terminal et tapez
+```
+git clone https://github.com/TonUsername/BDX-hackathon.git
+```
+Ajouter votre nom aux contributeurs dans le fichier contributors.md à la racine du repo, puis en enregistrez vos modifications en réalisant un commit.
+Pour cela, tapez cette commande à la racine du repository BDX-hackathon dans votre ordinateur
+
+```
+git add .
+```
+Puis
+```
+git commit -m “ajout contributeur“
+```
+et enfin
+```
+git push origin master
+```
+
+Vous devez alors spécifier votre login et password github.
+
+Une fois la sync complete, vous pouvez vous rendre
+
+
+
 # Outils hardware et software
 
-## Rotonde
-http://www.openbionics.com/shop/ada
+## MHKit hand dev kit
 ### Description
+https://github.com/MHKit/bionicohand-firmware
+###
 
 ## Main openbionics
 ### Description
@@ -67,7 +98,13 @@ Assembly guide http://www.openbionics.com/obtutorials/ada-v1-assembly
 
 ## Myo
 ### Description
+Le MYO est un bracelet qui permet de detecter les contractions musculaires de l'avant bras ainsi que sa position dans l'espace.
+
+
 ### Ressources
+
+Rotonde Myo module
+https://github.com/MHKit/rotonde-pyoconnect
 
 ## Myoware
 ### Description
@@ -118,5 +155,3 @@ https://learn.adafruit.com/adafruit-triple-axis-gyro-breakout
 Wide range, low power temperature sensor outputs an analog voltage that is proportional to the ambient temperature. To use, connect pin 1 (left) to power (between 2.7 and 5.5V), pin 3 (right) to ground, and pin 2 to analog in on your microcontroller. The voltage out is 0V at -50°C and 1.75V at 125°C. You can easily calculate the temperature from the voltage in millivolts: Temp °C = 100*(reading in V) - 50
 ### Documentation
 https://learn.adafruit.com/tmp36-temperature-sensor
-
-
